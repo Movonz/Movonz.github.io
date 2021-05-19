@@ -1,104 +1,113 @@
 <!DOCTYPE html>
-<!--layout.ejs的意思是共用的布局文件-->
-<!--partial()是个函数，来包含其他文件，使得我们能够更好的组织代码。-->
-<html>
-  <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-  <meta name="renderer" content="webkit">
-  <title>快乐星球</title>
-
-<!--Baidu Tongji-->
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "https://hm.baidu.com/hm.js?";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script>
-     
-
-
-  
-<link rel="stylesheet" href="/css/style.css">
-
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>
+        
+        快乐星球</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="快乐星球">
+<meta property="og:url" content="http://example.com/index.html">
+<meta property="og:site_name" content="快乐星球">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Movonz">
+<meta name="twitter:card" content="summary">
+    
+    
+    
+        
+            <link rel="stylesheet" href="http://example.com/css/markdown.css">
+        
+            <link rel="stylesheet" href="http://example.com/css/july.css">
+        
+    
 <meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="快乐星球" type="application/atom+xml">
 </head>
-  <body>
-    <div class="container">
-      <header class="header">
-  <div class="blog-title">
-    <a href="/" class="logo">快乐星球</a>
-  </div>
-  <nav class="navbar">
-    <ul class="menu">
-      
-    </ul>
-  </nav>
-</header>
+<body>
 
-      <main class="main">
-      <section class="date">
-  <div class="date">
-      <h2>HuangQiang and ZhangYuexin have been together for</h2>
-      <div class="timer">
-      <b id="d"></b> Days <b id="h"></b> Hours <b id="m"></b> Minutes <b id="s"></b> Seconds
-      </div>
-      <div class="song">
-          <!--页面底部歌词-->
-          <!-- require APlayer -->
-          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
-          <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
-          <!-- require MetingJS -->
-          <script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script>
-          <meting-js 
-          server="netease" 
-          type="playlist" 
-          id="334094261" 
-          fixed="true"
+<div id="banner-outer" class="hidden">
+    <div id="banner-image" style="background-image: url()"></div>
+    <img src="https://www.gravatar.com/avatar/7a585313ed855e8d652cbb3154a6056e?s=300&amp;d=mm&amp;r=g" id="avatar">
+</div>
 
-          autoplay="true" 
-          order="list" 
-          loop="all"></meting-js>
+<div id="menu-outer">
+    <div id="menu-inner">
+        
+            <a class="active" href="http://example.com/index.html">Home</a>
+        
+            <a class="false" href="http://example.com/archives/index.html">Archives</a>
+        
+            <a class="false" href="http://example.com/about/index.html">About</a>
+        
+    </div>
+</div>
+
+<div id="content-outer" class="container">
+    <div id="content-inner">
+        
+
+
+  <div id="recent-posts">
+    <h3 class="widget-title">Recent Posts</h3>
+    
+      <div class="recent-post-item">
+        <a href="/2021/05/19/hello-world/">Hello World</a>
+        <time datetime="2021-05-19T09:37:40.950Z">
+          5月 19, 2021
+        </time>
       </div>
+    
   </div>
 
-<!--计时器js-->
-      <script>
-        function timer() {
-        window.setTimeout("timer()", 1000);
-        var start = new Date("2019-06-09 00:00:00");
-        var t = new Date().getTime() - start;
-        var h = ~~(t / 1000 / 60 / 60 % 24);
-        if (h < 10) {h = "0" + h;}
-        var m = ~~(t / 1000 / 60 % 60);
-        if (m < 10) { m = "0" + m;}
-        var s = ~~(t / 1000 % 60);
-       if (s < 10) {s = "0" + s;}
-        document.getElementById('d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
-       document.getElementById('h').innerHTML = h;
-       document.getElementById('m').innerHTML = m;
-       document.getElementById('s').innerHTML = s;}
-        timer();
-      </script> 
-<!--END：计时器js-->
 
-<!--鼠标点击显示爱心-->
-<script src="https://cdn.jsdelivr.net/gh/wallleap/cdn/js/love.js"></script>
-</section>
-      </main>
 
-      
-        <script type="text/javascript" color="177, 122, 125" opacity="2" 
-            zIndex="-1" count="200" 
-            src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
-        </script>
-      
+<div id="paginator">
+  <span class="page-number current">1</span>
+</div>
 
     </div>
+</div>
 
-  </body>
+<div id="bottom-outer">
+    <div id="bottom-inner">
+        2019-2021 Movonz 皖ICP备16011445号
+    </div>
+</div>
+
+<div id="to-top">
+    <i class="iconfont icon-up"></i>
+</div>
+
+
+    
+        <script src="http://example.com/js/jquery-3.4.1.min.js"></script>
+    
+        <script src="http://example.com/js/highlight-9.13.1.min.js"></script>
+    
+        <script src="http://example.com/js/transition.js"></script>
+    
+        <script src="http://example.com/js/smooth-scroll.min.js"></script>
+    
+
+
+
+
+<script>
+  $(function () {
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > 150) {
+        $("#to-top").fadeIn();
+      } else {
+        $("#to-top").fadeOut();
+      }
+    });
+    $("#to-top").click(function () {
+      $("body,html").animate({scrollTop: 0}, 500);
+      return false;
+    })
+  })
+</script>
+</body>
 </html>
-
